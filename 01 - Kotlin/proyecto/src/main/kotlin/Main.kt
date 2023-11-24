@@ -54,7 +54,95 @@ fun main(){
     val sumaUno = Suma(1, 1)
     val sumaDos = Suma(null, 1)
     val sumaTres = Suma(1, null)
-}
+    val sumaCuatro = Suma(null, null)
+    sumaUno.sumar()
+    sumaDos.sumar()
+    sumaTres.sumar()
+    sumaCuatro.sumar()
+    println(Suma.pi)
+    println(Suma.elevarAlCuadrado(2))
+    println(Suma.historialSumas)
+
+    // ARREGLOS
+    // Tipos de arreglos
+
+    //Arreglo estatico no pued modificar el arreglo
+    val arregloEstatico: Array<Int> = arrayOf<Int>(1,2,3)
+    //Arreglo dinamico puede aumentar datos
+    val arregloDinamico: ArrayList<Int> = arrayListOf<Int>(1,2,3,4,5,6,7,8,9,10)
+
+    println(arregloDinamico)
+    arregloDinamico.add(11)
+    arregloDinamico.add(12)
+    println(arregloDinamico)
+
+    // FOR EACH -> Unit
+    //Iterar un arreglo
+    val respuestaForEach: Unit = arregloDinamico.
+    forEach{ valorActual: Int ->
+        println("Valor Actual: ${valorActual}")
+    }
+
+    //it (en ingles eso) significa el elemento iterado
+    arregloDinamico.forEach{println(it)}
+
+    arregloEstatico.
+            forEachIndexed{indice:Int, valorActual:Int ->
+                println("Valor ${valorActual} Indice: ${indice}")
+            }
+    println(respuestaForEach)
+
+    //MAP -> Muta el arreglo (Cambiar el arreglo)
+    // 1) Enviemos el nuevo valor de la iteracion
+    // 2) Nos devuelve es un NUEVO ARREGLO con los valores modificados
+
+    val respuestaMap: List<Double> = arregloDinamico
+        .map {valorActual: Int ->
+            return@map valorActual.toDouble() + 100.00
+        }
+    println(respuestaMap)
+    val respuestaMapDos = arregloDinamico.map{it + 15}
+
+    //FILTER -> Filtrar el arreglo
+    // 1) Devolver una expresion (TRUE o FALSE)
+    // 2) Nuevo arreglo filtrado
+
+    val respuestaFilter: List <Int> = arregloDinamico
+        .filter { valorActual: Int ->
+            //Expresion Condicion
+            val mayoresACinco: Boolean = valorActual > 5
+            return@filter mayoresACinco
+        }
+    val respuestaFilterDos = arregloDinamico.filter {it <= 5}
+    println(respuestaFilter)
+    println(respuestaFilterDos)
+
+    // OR AND
+    //OR -> ANY (alguno cumple)
+    // AND -> ALL (todos cumplen)
+
+    val respuestaAny: Boolean = arregloDinamico
+        .any{valorActual: Int ->
+            return@any (valorActual > 5)
+        }
+    println(respuestaAny) //true
+
+    val respuestaAll:Boolean = arregloDinamico
+        .all{valorActual:Int ->
+            return@all (valorActual > 5)
+        }
+    println(respuestaAll) //false
+
+    //REDUCE -> Valor acumulado
+    // valor acumulado = 0 (Siempre 0 en lenguaje Kotlin)
+    //[1,2,3,4,5] ->  Sume todos los valores del arregl
+    //Valor iteracion 1 = valorEmpeeza +1 = 0 + 1 = 1
+    //Valor iteracion 2 = valorIteración1 +2 = 1 + 2 = 3
+    val respuestaReduce: Int = arregloDinamico
+        .reduce{ // acumulado = 0 -> SIEMPRE EMPIEZA EN 0
+            acumulado: Int, valorActual: Int ->
+            return@reduce (acumulado + valorActual) // Logica negocio
+        }
 
 abstract class NumerosJava{
     protected val numeroUno: Int
@@ -114,7 +202,38 @@ class Suma(//Constructor Primario Suma
         if(dos == null) 0 else uno
     ) // si no necesitamos el bloque de codigo "{}" lo omitimos
 
+    constructor( // cuarto constructor
+        uno:Int?, //parametros
+        dos:Int? //parametros
+    ): this( //llamada constructor primario
+        if(uno == null) 0 else uno,
+        if(dos == null) 0 else uno
+    ) // si no necesitamos el bloque de codigo "{}" lo omitimos
+
+
+    public fun sumar(): Int { //public por defecto, private o protected
+        val total = numeroUno + numeroDos
+        agregarHistorial(total)
+        return total
+    }
+
+    companion object { //objeto single para todas las clases
+        //Atributo y métodos compartidos
+        // entre las instancias
+        val pi = 3.14
+        fun elevarAlCuadrado(num:Int): Int{
+            return num*num
+        }
+
+        val historialSumas = arrayListOf<Int>()
+
+        fun agregarHistorial(valorNuevaSuma: Int){
+            historialSumas.add(valorNuevaSuma)
+        }
+    }
 }
+
+
 
 // void -> Unit
 fun imprimirNombre(nombre: String): Unit{
