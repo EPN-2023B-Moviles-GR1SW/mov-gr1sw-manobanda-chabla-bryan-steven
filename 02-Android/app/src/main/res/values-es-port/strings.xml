@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="text">Retrato - Español</string>
+    <color name="background">#53C8B1</color>
+    <color name="text_color">#5E4B4B</color>
+</resources>
