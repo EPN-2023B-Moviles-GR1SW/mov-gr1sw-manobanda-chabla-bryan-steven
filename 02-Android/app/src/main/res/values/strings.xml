@@ -1,6 +1,6 @@
 <resources>
-    <!--string name="app_name">B2023-gr1sw-bsmc</string>
-    <string name="saludo">Buenos días</string-->
+    <string name="app_name" translatable="false">B2023-gr1sw-bsmc</string>
+    <string name="saludo" translatable="false">Buenos días</string>
     <string name="text">Default window</string>
     <color name="background">#BABA15</color>
     <color name="text_color">#CD0000</color>
