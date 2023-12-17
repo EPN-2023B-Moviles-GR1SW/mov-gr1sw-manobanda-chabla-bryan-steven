@@ -4,4 +4,9 @@
     <string name="text">Default window</string>
     <color name="background">#BABA15</color>
     <color name="text_color">#CD0000</color>
+    <string-array name="string_array_opciones_dialogo">
+        <item>Lunes</item>
+        <item>Martes</item>
+        <item>Miercoles</item>
+    </string-array>
 </resources>
