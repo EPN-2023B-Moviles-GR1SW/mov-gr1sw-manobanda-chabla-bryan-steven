@@ -1,0 +1,10 @@
+1,1,Tigre,15-07-2012,2,true,Felino
+2,1,Mono Araña,23-04-2015,5,false,Mamífero
+3,2,Elefante,17-11-2019,15,false,mamifero
+4,2,León Blanco,20-09-2014,4,true,Felino
+5,3,Oso Panda,10-06-2013,2,false,Mamífero
+6,3,Jaguar,14-03-2016,3,true,Felino
+7,4,Lobo Gris,28-02-2011,6,true,Mamífero
+9,5,Rinoceronte Blanco,12-09-2014,2,true,Mamífero
+10,5,Orangután,30-04-2016,5,false,Mamífero
+11,2,Tigre,17-11-2020,5,true,Mamifero

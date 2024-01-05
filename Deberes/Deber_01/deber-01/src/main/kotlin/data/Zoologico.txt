@@ -1,0 +1,5 @@
+2,Zoológico de San Diego,San Diego,1000,40.2,Renombrado por su conservación y hábitats naturales para los animales.,11
+3,Zoológico de Chapultepec,Mexico City,800,35.0,Situado en el Bosque de Chapultepec,
+4,Zoológico de Berlín,Berlín,700,38.9,Uno de los zoológicos más antiguos del país con importantes programas de conservación.,
+5,Zoológico de Singapur,Singapur,600,32.7,Destacado por sus esfuerzos en la conservación y programas educativos.,
+8,Zoo italia,Francia,125,256.0,Conservador de especies,
