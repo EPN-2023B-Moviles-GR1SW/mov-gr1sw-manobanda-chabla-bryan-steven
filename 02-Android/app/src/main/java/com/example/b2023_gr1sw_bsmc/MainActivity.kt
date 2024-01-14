@@ -15,9 +15,8 @@ class MainActivity : AppCompatActivity() {
 
     val callbackContenidoIntentExplicito = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
-    ){
-        result ->
-        if (result.resultCode == Activity.RESULT_OK){
+    ) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
             //Logica del negocio
             val data = result.data
             mostrarSnackbar(
@@ -26,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun mostrarSnackbar(texto:String){
+    fun mostrarSnackbar(texto: String) {
         com.google.android.material.snackbar.Snackbar
             .make(
                 findViewById(R.id.id_layout_main),
@@ -39,13 +38,12 @@ class MainActivity : AppCompatActivity() {
     val callbackIntentPickUri =
         registerForActivityResult(
             ActivityResultContracts.StartActivityForResult()
-        ){
-            result ->
-            if (result.resultCode == Activity.RESULT_OK){
-                if (result.data != null){
+        ) { result ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                if (result.data != null) {
                     val uri: Uri = result.data!!.data!!
                     val cursor = contentResolver.query(
-                        uri,null,null,null,null,null
+                        uri, null, null, null, null, null
                     )
                     cursor?.moveToFirst()
                     val indiceTelefono = cursor?.getColumnIndex(
@@ -79,7 +77,7 @@ class MainActivity : AppCompatActivity() {
         val botonImplicito = findViewById<Button>(
             R.id.btn_ir_intent_implicito
         )
-            botonImplicito.setOnClickListener{
+        botonImplicito.setOnClickListener {
             val intentConRespuesta = Intent(
                 Intent.ACTION_PICK,
                 ContactsContract.CommonDataKinds.Phone.CONTENT_URI
@@ -90,7 +88,7 @@ class MainActivity : AppCompatActivity() {
         val botonIntentExplicito = findViewById<Button>(
             R.id.btn_ir_intent_explicito
         )
-            botonIntentExplicito.setOnClickListener{
+        botonIntentExplicito.setOnClickListener {
             abrirActividadParametros(
                 CIntentExplicitoParametros::class.java
             )
@@ -101,11 +99,16 @@ class MainActivity : AppCompatActivity() {
             .setOnClickListener {
                 irActividad(ECrudEntrenador::class.java)
             }
+
+        val botonRView = findViewById<Button>(R.id.btn_recycler_view)
+        botonRView.setOnClickListener {
+            irActividad(FRecyclerView::class.java)
+        }
     }
 
     fun abrirActividadParametros(
-        clase:Class<*>
-    ){
+        clase: Class<*>
+    ) {
         val intentExplicito = Intent(this, clase)
         //Enviar solo variables primitivas
         intentExplicito.putExtra("nombre", "Bryan")
@@ -117,7 +120,7 @@ class MainActivity : AppCompatActivity() {
 
     fun irActividad(
         clase: Class<*>
-    ){
+    ) {
         val intent = Intent(this, clase)
         startActivity(intent)
     }
