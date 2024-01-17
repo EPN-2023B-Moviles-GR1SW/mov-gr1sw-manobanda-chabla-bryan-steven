@@ -256,4 +256,4 @@ fun calcularSueldo(
         bonoEspecial.dec()
         return sueldo * (100/tasa) + bonoEspecial
     }
-}
+}}
