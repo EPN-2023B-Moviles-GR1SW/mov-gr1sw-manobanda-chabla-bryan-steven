@@ -40,7 +40,7 @@ class FormularioActualizarFauna : AppCompatActivity() {
         tcantidad.setText(cantidad, TextView.BufferType.EDITABLE)
 
         val tdepredador = findViewById<CheckBox>(R.id.cb_fauna_actualizar_depredador)
-        tdepredador.setText(esDepredador, TextView.BufferType.EDITABLE)
+        tdepredador.isChecked = esDepredador.toBoolean()
 
         val ttipo = findViewById<EditText>(R.id.input_fauna_actualizar_tipo)
         ttipo.setText(tipo, TextView.BufferType.EDITABLE)
@@ -70,7 +70,7 @@ class FormularioActualizarFauna : AppCompatActivity() {
         val cantidad = findViewById<EditText>(R.id.input_fauna_actualizar_cantidad).text.toString().toInt()
         intentDevlverParametros.putExtra("cantidadModificado", cantidad)
 
-        val esDepredador = findViewById<EditText>(R.id.cb_fauna_actualizar_depredador).text.toString().toBoolean()
+        val esDepredador = findViewById<CheckBox>(R.id.cb_fauna_actualizar_depredador).isChecked
         intentDevlverParametros.putExtra("esDepredadorModificado",esDepredador)
 
         val tipo = findViewById<EditText>(R.id.input_fauna_actualizar_tipo).text.toString()

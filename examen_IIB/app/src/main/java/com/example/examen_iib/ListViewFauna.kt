@@ -72,7 +72,7 @@ class ListViewFauna : AppCompatActivity() {
                     val data = result.data
                     val db = Firebase.firestore
 
-                    val faunaRefUnica = db.collection("zoologico").document(this.idZoologico!!).collection("fauna")
+                    val faunaRefUnica = db.collection("zoologico").document(data?.getStringExtra("idZooDevuelto")?.toString()!!).collection("fauna")
 
                     val faunaActualizada = hashMapOf(
                         "nombre" to data?.getStringExtra("nombreModificado").toString(),

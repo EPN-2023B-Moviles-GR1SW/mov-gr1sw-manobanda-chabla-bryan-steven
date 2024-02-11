@@ -39,7 +39,7 @@ class FormularioFauna : AppCompatActivity() {
         var cantidad = findViewById<EditText>(R.id.input_fauna_cantidad).text.toString().toInt()
         intentDevolverParametros.putExtra("cantidadModificado",cantidad)
 
-        var depredador = findViewById<EditText>(R.id.cb_fauna_depredador).text.toString().toBoolean()
+        var depredador = findViewById<CheckBox>(R.id.cb_fauna_depredador).isChecked
         intentDevolverParametros.putExtra("esDepredadorModificado",depredador)
 
         var tipo = findViewById<EditText>(R.id.input_fauna_tipo).text.toString()
