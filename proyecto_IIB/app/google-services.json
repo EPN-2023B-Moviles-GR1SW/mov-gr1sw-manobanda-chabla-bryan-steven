@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "809633097926",
+    "firebase_url": "https://b2023-gr1sw-bsmc-default-rtdb.firebaseio.com",
+    "project_id": "b2023-gr1sw-bsmc",
+    "storage_bucket": "b2023-gr1sw-bsmc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809633097926:android:72a1d5f10d467c10824fc7",
+        "android_client_info": {
+          "package_name": "com.example.b2023_gr1sw_bsmc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3J1qwx97hjxYPtX48yn4A63rQR79AfiA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809633097926:android:44bdf1cd64e5d2d3824fc7",
+        "android_client_info": {
+          "package_name": "com.example.deber_02"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3J1qwx97hjxYPtX48yn4A63rQR79AfiA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809633097926:android:1c4aa18f22792670824fc7",
+        "android_client_info": {
+          "package_name": "com.example.examen_ib"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3J1qwx97hjxYPtX48yn4A63rQR79AfiA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809633097926:android:f4afece39f1a944a824fc7",
+        "android_client_info": {
+          "package_name": "com.example.examen_iib"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3J1qwx97hjxYPtX48yn4A63rQR79AfiA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809633097926:android:116d22b3b7d21b50824fc7",
+        "android_client_info": {
+          "package_name": "com.example.proyecto_iib"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3J1qwx97hjxYPtX48yn4A63rQR79AfiA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
